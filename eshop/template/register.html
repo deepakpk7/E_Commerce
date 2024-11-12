@@ -12,7 +12,8 @@
     <div class="container">
         <div class="login-container bg-light">
             <h2>Registration</h2>
-            <form>
+            <form action="" method="post">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" required>
