@@ -24,13 +24,17 @@ def e_shop_login(req):
 def register(req):
     return render(req,'register.html')
 
-def e_shop_logout(req):
-    logout(req)
-    req.session.flush() #Delete session
-    return redirect(e_shop_login)
 
 def shop_home(req):
     if 'shop' in req.session:
         return render(req,'shop/home.html')
     else:
         return redirect(e_shop_login)
+    
+def add_product(req):
+    return render(req,'shop/add_product.html')
+    
+def e_shop_logout(req):
+    logout(req)
+    req.session.flush() #Delete session
+    return redirect(e_shop_login)
