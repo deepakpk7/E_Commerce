@@ -30,6 +30,12 @@
             <a class="nav-link" href="shop_home">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#">cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">view booking</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="logout">Logout</a>
           </li>    
         </ul>
@@ -40,7 +46,7 @@
     <div class="row g-4">
       {% for pro in products %}
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="ggg" style="text-decoration: none;">
+        <a href="" style="text-decoration: none;">
           <div class="card h-100 shadow">
             <img src="{{pro.img.url}}" class="card-img-top" alt="{{pro.name}}" style="height: 300px; object-fit: cover;">
             <div class="card-body d-flex flex-column">

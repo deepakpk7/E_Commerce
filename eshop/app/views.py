@@ -123,3 +123,11 @@ def user_home(req):
         return render(req,'user/home.html',{'products':data})
     else:
         return redirect(e_shop_login)
+    
+    
+def view_product(req):
+    if 'user' in req.session:
+        data=Product.objects.all()
+        return render(req,'user/view_product.html',{'products':data})
+    else:
+        return render(req,'user/home.html')
