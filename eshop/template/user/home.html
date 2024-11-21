@@ -30,7 +30,7 @@
             <a class="nav-link" href="shop_home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">cart</a>
+            <a class="nav-link" href="view_cart">cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">view booking</a>
@@ -46,7 +46,7 @@
     <div class="row g-4">
       {% for pro in products %}
       <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="" style="text-decoration: none;">
+        <a href="view_product/{{pro.pk}}" style="text-decoration: none;">
           <div class="card h-100 shadow">
             <img src="{{pro.img.url}}" class="card-img-top" alt="{{pro.name}}" style="height: 300px; object-fit: cover;">
             <div class="card-body d-flex flex-column">
