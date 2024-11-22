@@ -108,22 +108,7 @@
           </div>
         </div>
       </nav>
-    <div class="container py-5 mt-6" style="margin-top: 100px;">
-        <div class="row g-4 align-items-center">
-            {% for i in cart%}
-            <div class="container col-lg-6">
-                <img src="{{i.product.img.url}}" alt="" style="height: 400px;width: 400px;">
-                <div class="container col-lg-6">
-                    <h1>Name :{{i.product.name}}</h1>
-                    <h3>price:{{i.product.offer_price}}</h3>
-                    <a href="../qty_dec/{{i.pk}}">- </a> Qty: {{i.qty}} <a href="../qty_in/{{i.pk}}"> + </a>
-                </div>
-                
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-    <!-- <div class="container py-5">
+    <div class="container py-5">
         <div class="row g-4 align-items-center">
             {% for i in cart %}
             <div class="col-lg-6 col-md-12">
@@ -136,16 +121,16 @@
                         <h4 class="product-name">{{ i.product.name }}</h4>
                         <p class="product-price">Price: ${{ i.product.offer_price }}</p>
                         <div class="quantity-controls d-flex align-items-center">
-                            <a href="#" class="btn btn-outline-secondary btn-sm me-2">-</a>
+                            <a href="../qty_dec/{{i.pk}}" class="btn btn-outline-secondary btn-sm me-2">-</a>
                             <span class="qty">Qty: {{ i.qty }}</span>
-                            <a href="#" class="btn btn-outline-secondary btn-sm ms-2">+</a>
+                            <a href="../qty_in/{{i.pk}}" class="btn btn-outline-secondary btn-sm ms-2">+</a>
                         </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
         </div>
-    </div> -->
+    </div>
     
 </body>
 </html>
