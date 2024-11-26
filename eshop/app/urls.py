@@ -9,6 +9,9 @@ urlpatterns = [
     path('logout',views.e_shop_logout),
     path('edit_product/<pid>',views.edit_product),
     path('delete_product/<pid>',views.delete_product),
+    path('view_bookings',views.view_bookings),
+
+    
 # -------------user----------
     path('register',views.register),
     path('user_home',views.user_home),
